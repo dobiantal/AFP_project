@@ -1,4 +1,5 @@
 import tkinter as tk
+from Operators import sqrt
 """*A főablak implementálása."""
 window = tk.Tk()
 Width: int = 600
@@ -103,6 +104,7 @@ def EvomOp():
     global OPERANDUS_A
     global OPERATOR
     OPERATOR = "√"
+    sqrt.sqrt() # Behúztam a gyökvonást.
     OPERANDUS_A = Display.get()
     Display.delete(0,'end')
 Evo = tk.Button(text="√",font=("Times New Roman",25),command=lambda: EvomOp())

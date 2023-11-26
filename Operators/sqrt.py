@@ -1,4 +1,2 @@
-
-
 def sqrt():
     return None
