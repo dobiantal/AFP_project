@@ -1,0 +1,7 @@
+Alkalmazások fejlesztése projekt labor 
+Számológép alkalmazás 
+Feladat: Négyzetgyök számolás
+
+A projekt elkészítéséhez készíteni fogok egy osztályt amelynek a neve TT_Sqrt lesz. Ebben az osztályban fogom implementálni az sqrt() metódust. Ennek a metódusnak lesz a feladata, hogy a 
+megkapott értéknek kiszámolja a négyzetgyökét és visszaadja egy double típusként  
+
