@@ -22,43 +22,43 @@ OPERANDUS_B: int = 0
 *Az alábbi kód implementálja a fő ablakon a funkció gombokat és a kattintási methodusokat.
 """
 def ZeroC():
-    Display.insert(0,"0")
+    Display.insert("end","0")
 Zero = tk.Button(text=0, font=("Times New Roman",25),command=lambda:ZeroC())
 Zero.place(relwidth=0.15, relheight=0.15, relx=0.18, rely=0.75)
 def OneC():
-    Display.insert(0,"1")
+    Display.insert("end","1")
 One = tk.Button(text=1,font=("Times New Roman",25),command=lambda:OneC())
 One.place(relwidth=0.15, relheight=0.15, relx=0.03, rely=0.6)
 def TwoC():
-    Display.insert(0,"2")
+    Display.insert("end","2")
 Two = tk.Button(text=2,font=("Times New Roman",25),command=lambda:TwoC())
 Two.place(relwidth=0.15, relheight=0.15, relx=0.18, rely=0.6)
 def ThreeC():
-    Display.insert(0,"3")
+    Display.insert("end","3")
 Three = tk.Button(text=3,font=("Times New Roman",25),command=lambda:ThreeC())
 Three.place(relwidth=0.15, relheight=0.15, relx=0.33, rely=0.6)
 def FourC():
-    Display.insert(0,"4")
+    Display.insert("end","4")
 Four = tk.Button(text=4,font=("Times New Roman",25),command=lambda:FourC())
 Four.place(relwidth=0.15, relheight=0.15, relx=0.03, rely=0.45)
 def FiveC():
-    Display.insert(0,"5")
+    Display.insert("end","5")
 Five = tk.Button(text=5,font=("Times New Roman",25),command=lambda:FiveC())
 Five.place(relwidth=0.15, relheight=0.15, relx=0.18, rely=0.45)
 def SixC():
-    Display.insert(0,"6")
+    Display.insert("end","6")
 Six = tk.Button(text=6,font=("Times New Roman",25),command=lambda:SixC())
 Six.place(relwidth=0.15, relheight=0.15, relx=0.33, rely=0.45)
 def SevenC():
-    Display.insert(0,"7")
+    Display.insert("end","7")
 Seven = tk.Button(text=7,font=("Times New Roman",25),command=lambda:SevenC())
 Seven.place(relwidth=0.15, relheight=0.15, relx=0.03, rely=0.30)
 def EightC():
-    Display.insert(0,"8")
+    Display.insert("end","8")
 Eight = tk.Button(text=8,font=("Times New Roman",25),command=lambda:EightC())
 Eight.place(relwidth=0.15, relheight=0.15, relx=0.18, rely=0.30)
 def NineC():
-    Display.insert(0,"9")
+    Display.insert("end","9")
 Nine = tk.Button(text=9,font=("Times New Roman",25),command=lambda:NineC())
 Nine.place(relwidth=0.15, relheight=0.15, relx=0.33, rely=0.30)
 
