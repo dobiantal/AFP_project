@@ -1,0 +1,2 @@
+def multiplicate(OPERANDUS_A,OPERANDUS_B):
+    return OPERANDUS_A * OPERANDUS_B

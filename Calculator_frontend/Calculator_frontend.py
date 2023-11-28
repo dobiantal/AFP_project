@@ -1,5 +1,6 @@
 import tkinter as tk
 from Operators import sqrt
+from Operators import multiplicate
 """*A főablak implementálása."""
 window = tk.Tk()
 Width: int = 600
