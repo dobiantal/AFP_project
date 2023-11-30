@@ -1,36 +1,13 @@
-from decimal import Decimal,getcontext,InvalidOperation
+from decimal import Decimal, getcontext
 
-class Subtraction():
+def subtract(OPERANDUS_A, OPERANDUS_B):
+    # Beállítja a kívánt pontosságot (8 tizedesjegy)
+    getcontext().prec = 10
 
-    def __init__(self,expression):
-        self.expression = expression
-        self.result = None
-
-    global1 = ""
-    global2 = ""
-
-    @staticmethod
-    def subtract(expression):
-        numbers = [Decimal(num) for num in expression.split('-') if num]
-        result = numbers[0] if numbers else Decimal(0)
-
-        for num in numbers[1:]:
-            result -= num
-
-        Subtraction.global1 = expression
-        Subtraction.global2 = format(result, '.8f')
-
-        return format(result, '.8f')
-
-    def calculate(self):
-        getcontext().prec = 8  # Beállítottam a tizedesjegy pontosságot
-
-        if '-' in self.expression:
-            try:
-                self.result = Subtraction.subtract(self.expression)
-            except (ValueError, SyntaxError, InvalidOperation) as e:
-                return str(e)  # Visszatérés hibaüzenettel
-        else:
-            return "Hiba!"
-
+    try:
+        eredmeny = Decimal(OPERANDUS_A) - Decimal(OPERANDUS_B)
+        return round(eredmeny, 8)
+    except Exception as e:
+        print("Hiba történt a kivonás során:", e)
+        return None  # Jelzés hogy a művelet nem sikerült
 
