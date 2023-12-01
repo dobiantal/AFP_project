@@ -1,6 +1,5 @@
 import tkinter as tk
-from Operators import sqrt
-from Operators import multiplicate
+from Operators import sqrt,multiplicate,div,subtraction,Addition
 """*A főablak implementálása."""
 window = tk.Tk()
 Width: int = 600
@@ -105,20 +104,37 @@ def EvomOp():
     global OPERANDUS_A
     global OPERATOR
     OPERATOR = "√"
-    sqrt.sqrt() # Behúztam a gyökvonást.
     OPERANDUS_A = Display.get()
-    Display.delete(0,'end')
+    Display.insert(0, sqrt.negyzetgyok(float(OPERANDUS_A)))
+    OPERANDUS_A = 0
+    OPERATOR = ""
 Evo = tk.Button(text="√",font=("Times New Roman",25),command=lambda: EvomOp())
 Evo.place(relwidth=0.15, relheight=0.15, relx=0.63, rely=0.30)
 def EqOp():
     global OPERANDUS_B
+    global OPERATOR
+    global OPERANDUS_A
     OPERANDUS_B = Display.get()
     Display.delete(0,'end')
     """
     *Egy elágazás rendszerben kiválasztjuk melyik operátor leütés történt annak megfelelően hívjuk meg,
     az álltalatok írt methodusokat a két operandussal.
     """
-    Display.insert(0,"A számítás végeredményét visszaírjuk a kijelzőre.")
+    if OPERATOR == "+":
+        Display.insert(0, Addition.Addition(OPERANDUS_A,OPERANDUS_B))
+    elif OPERATOR == "-":
+        Display.insert(0, subtraction.subtract(OPERANDUS_A,OPERANDUS_B))
+    elif OPERATOR == "*":
+        Display.insert(0, multiplicate.multiplicate(OPERANDUS_A,OPERANDUS_B))
+    elif OPERATOR == "/":
+        Display.insert(0, div.div(OPERANDUS_A, OPERANDUS_B))
+    else:
+        Display.insert(0,"Err")
+    """A gyökvonás művelet mivel egy operandussal dolgozik ezért a képernyőre 
+    írás a saját függvényénél van meghívva."""
+    OPERANDUS_A = 0
+    OPERATOR = ""
+    OPERANDUS_B = 0
 Eq = tk.Button(text="=",font=("Times New Roman",25),command=lambda: EqOp())
 Eq.place(relwidth=0.15, relheight=0.15, relx=0.63, rely=0.75)
 

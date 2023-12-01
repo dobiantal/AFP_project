@@ -8,6 +8,3 @@ def div(OPERANDUS_A , OPERANDUS_B):
     except ZeroDivisionError:
         return "0-val való osztás 0-t ad!"
 
-
-
-print(div(40, 10))
