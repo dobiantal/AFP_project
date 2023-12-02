@@ -1,15 +1,12 @@
 name: 'python'
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
+on: [push, pull_request]
 
 permissions:
   contents: read
 
 jobs:
-  terraform:
+  python:
     name: 'python'
     runs-on: ubuntu-latest
     environment: production
