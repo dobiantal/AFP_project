@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
+  python:
     name: 'python'
     runs-on: ubuntu-latest
     environment: production
