@@ -114,7 +114,8 @@ def EvomOp():
     global OPERATOR
     OPERATOR = "√"
     OPERANDUS_A = Display.get()
-    Display.insert(0, negyzetgyok(float(OPERANDUS_A)))
+    Display.delete(0, 'end')
+    Display.insert(0, negyzetgyok(OPERANDUS_A))
     OPERANDUS_A = 0
     OPERATOR = ""
 Evo = tk.Button(text="√", bg='#065ef9', font=("Times New Roman",25),command=lambda: EvomOp())
